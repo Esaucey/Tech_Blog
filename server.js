@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const homeRoute = require('./controllers/home');
-const about = require('./controllers/about');
 const app = express();
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -17,8 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(homeRoute);
-app.use(about);
+app.use(require('./controllers/'));
+
 
 
 const PORT = process.env.PORT || 3001;
