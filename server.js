@@ -8,6 +8,17 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const hbs = exphbs.create({});
 
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+      db: sequelize
+    })
+  };
+
+app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -21,5 +32,8 @@ app.use(require('./controllers/'));
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, console.log(`app listening port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
+  sequelize.sync({ force: false });
+});
 
