@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-  varify(login) {
+  checkPassword(login) {
     return bcrypt.compareSync(login, this.password);
   }
 }
@@ -23,9 +23,6 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [4]
-      }
     }
   },
   {
