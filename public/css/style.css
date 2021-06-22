@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(223, 219, 162);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(88, 52, 52);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    margin: 0 40px 0 40px;
+    font-size: large;
+    font-weight: 200;
+    list-style: none;
+}
+
+label {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(68, 48, 39);
+}
+
+input {
+    padding: 7px;
+    width: 90%;
+    font-size: 18px;
+}
+
+textarea {
+    padding: 7px;
+    width: 90%;
+    height: 200px;
+    font-size: 18px;
+}
+
+.navbar {
+    padding: 8px;
+    background-color: rgb(165, 177, 131);
+}
+
+.card-body{
+    padding: 15px;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: cadetblue;
+    background-color: burlywood;
+}
+
+.post-btn {
+    font-size: 25px;
+}
+
+.admin-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-post {
+    font-size: 28px;
+}
+
+.post-card {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(111, 140, 156);
+    background-color: cornsilk;
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.content-card {
+    padding: 10px;
+    background-color: rgb(131, 180, 180);
+}
+
+#loginForm {
+    text-align: center;
+}
+
+#signupForm {
+    text-align: center;
+}
