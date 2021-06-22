@@ -16,4 +16,4 @@ Your post will show on the home page where everyone can see.
 
 ## Deployment
 
-[Tech Blog](https://esaucey.github.io/Tech_Blog/)
+[Tech Blog](https://peaceful-garden-51483.herokuapp.com/)
